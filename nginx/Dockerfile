@@ -2,7 +2,7 @@
 FROM nginx
 
 # File Author / Maintainer
-MAINTAINER Andre Prado
+MAINTAINER Jama Noor
 
 # Copy custom configuration file from the current directory
 COPY nginx.conf /etc/nginx/nginx.conf

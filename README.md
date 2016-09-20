@@ -12,7 +12,28 @@ This docker-compose setup is everything you need to get a django-nginx-gunicorn 
 
 Nginx will now be serving from port 80.
 
-## Example postgres django 
+## Example local server (for local machines)
+
+```
+DEBUG = True
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+TEMPLATE_DEBUG = DEBUG
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'dev-env/dev_db',
+        'USER': 'django_login',
+        'PASSWORD': 'django'}
+}
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+```
+
+## Example postgres django (use only on fgbeta.samfundet.no)
 
 ```
 DEBUG = True

@@ -1,4 +1,4 @@
-docker-compose build
-docker-compose up -d
-docker-compose ps
-bash copy_static.sh
+sudo docker-compose build
+sudo docker-compose up -d
+sudo docker-compose ps
+sudo bash copy_static.sh
